@@ -55,9 +55,11 @@ export default function AmpelStatus({
 
   if (variant === "zeile") {
     return (
-      <span className={`flex items-center gap-2 ${className ?? ""}`}>
+      <span
+        className={`inline-flex items-center gap-3 rounded-full bg-surface py-2 pl-4 pr-5 text-[15px] font-medium text-primary ${className ?? ""}`}
+      >
         <span
-          className={`h-1.5 w-1.5 shrink-0 rounded-full ${t.dot}`}
+          className={`h-3 w-3 shrink-0 rounded-full ${t.dot}`}
           aria-hidden="true"
         />
         {t.kurz}
