@@ -1,0 +1,9 @@
+.git
+.claude
+site/node_modules
+site/.next
+site/.env
+site/.env.*
+site/.claude
+image.png
+image-768x512.png
