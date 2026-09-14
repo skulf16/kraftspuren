@@ -1,0 +1,25 @@
+# Abhängigkeiten & Builds
+site/node_modules/
+site/.next/
+site/out/
+
+# Secrets (Admin-Passwort der Terminampel!)
+site/.env
+site/.env.*
+
+# Next.js generiert
+site/next-env.d.ts
+
+# Unversionierte Original-Fotos (Auswahl liegt in site/public/praxis/)
+WhatsApp Image *.jpeg
+
+# Interne Briefing-Dokumente (nicht veröffentlichen)
+anweisungen.md
+kraftspuren-design-system.md
+marken-briefing-kraftspuren.md
+physio-praxis-seo-content-writer-SKILL.md
+sea-landingpage-struktur.md
+voice-profile-physiotherapie.md
+
+# System
+.DS_Store
