@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import FaqAccordion from "@/components/brand/FaqAccordion";
 import KassenBadge from "@/components/brand/KassenBadge";
 import AmpelStatus from "@/components/AmpelStatus";
+import AblaufBanner from "@/components/AblaufBanner";
 import { LANDING_PAGES, ABLAUF_LP } from "@/lib/lp-data";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -103,26 +104,8 @@ export default async function LandingPage({ params }: Props) {
         </ul>
       </section>
 
-      {/* Sektion 3 - Ablauf */}
-      <section className="py-8 md:py-12">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <p className="eyebrow mb-3">Ihr Weg zu uns</p>
-          <h2 className="text-2xl font-light tracking-tight text-primary md:text-3xl">
-            So läuft Ihre Behandlung ab.
-          </h2>
-          <ol className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {ABLAUF_LP.map((step, i) => (
-              <li key={step.title} className="flex flex-col rounded-2xl bg-white p-6">
-                <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-surface text-lg font-light text-primary">
-                  {i + 1}
-                </span>
-                <h3 className="font-semibold leading-snug text-primary">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      {/* Sektion 3 - Ablauf als Foto-Banner */}
+      <AblaufBanner steps={ABLAUF_LP} />
 
       {/* Sektion 4 - Leistungsblock */}
       <section className="py-8 md:py-12">
